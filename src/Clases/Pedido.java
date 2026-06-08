@@ -1,3 +1,5 @@
+package Clases;
+
 public class Pedido {
 
     private String id;
@@ -51,7 +53,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{" +
+        return "Clases.Pedido{" +
                 "id='" + id + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", stockActual=" + stockActual +
