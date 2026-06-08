@@ -12,7 +12,7 @@ Este repositorio contiene el código fuente correspondiente al Trabajo Práctico
 | :--- | :--- |
 | Francisco Gonzalez Miel | 1218997 |
 | Tomas Bautista Casal    | 1210292 |
-| [Nombre Integrante 3] | [Legajo 3] |
+| Martin Federico Asprea  | 1207196 |
 
 ---
 
