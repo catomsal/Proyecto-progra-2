@@ -1,34 +1,27 @@
 package Clases;
 
-public class Pedido {
+public class Producto {
 
-    private String id;
+    private String codigo;
     private String nombre;
     private int stockActual;
     private int stockMinimo;
+    private Ubicacion ubicacion;
 
-
-    public Pedido(String nombre, String id, int stockActual, int stockMinimo) {
+    public Producto(String codigo, String nombre, int stockActual, int stockMinimo, Ubicacion ubicacion) {
+        this.codigo = codigo;
         this.nombre = nombre;
-        this.id = id;
         this.stockActual = stockActual;
         this.stockMinimo = stockMinimo;
+        this.ubicacion = ubicacion;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public String getCodigo() {
+        return codigo;
     }
 
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public int getStockActual() {
@@ -43,21 +36,23 @@ public class Pedido {
         return stockMinimo;
     }
 
-    public void setStockMinimo(int stockMinimo) {
-        this.stockMinimo = stockMinimo;
+    public Ubicacion getUbicacion() {
+        return ubicacion;
     }
 
+    // Devuelve true si el stock esta en nivel critico
     public boolean esCritico() {
-        return stockMinimo >= (stockActual);
+        return stockActual <= stockMinimo;
     }
 
     @Override
     public String toString() {
-        return "Clases.Pedido{" +
-                "id='" + id + '\'' +
+        return "Producto{" +
+                "codigo='" + codigo + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", stockActual=" + stockActual +
+                ", stock=" + stockActual +
                 ", stockMinimo=" + stockMinimo +
+                ", ubicacion=" + ubicacion +
                 '}';
     }
 }
