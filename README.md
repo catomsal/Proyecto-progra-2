@@ -6,12 +6,12 @@ Este repositorio contiene el código fuente correspondiente al Trabajo Práctico
 
 ---
 
-## 👥 Integrantes del Grupo: [Nombre del Grupo]
+## 👥 Integrantes del Grupo: Nombre original de grupo
 
 | Nombre y Apellido | Legajo |
 | :--- | :--- |
 | Francisco Gonzalez Miel | 1218997 |
-| [Nombre Integrante 2] | [Legajo 2] |
+| Tomas Bautista Casal    | 1210292 |
 | [Nombre Integrante 3] | [Legajo 3] |
 
 ---
