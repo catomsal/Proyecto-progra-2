@@ -32,5 +32,18 @@ Para cumplir con los Requisitos Funcionales (RF) de eficiencia y tiempo de ejecu
 
 * [x] **Etapa 1:** Propuesta, diseño y diagramas (UML / Flujo).
 * [x] **Etapa 2:** Avance funcional y desarrollo de estructuras base.
-* [ ] **Etapa 3:** Presentación final del código completo, algoritmo de Dijkstra para el ruteo y casos de prueba.
+* [ ] **Etapa 3:** Presentación final del código completo y casos de prueba.
 
+
+---
+
+## Funcionalidades implementadas en la segunda etapa
+
+* **Historial de acciones:** Utilizando una pila dinámica, podemos deshacer la última acción que se realizó en los registros de movimientos de productos. Esto se implementó en caso de errores de carga en los operarios.
+*  **Linea de expedición:** Utilizando la estructura de una cola, nos aseguramos que los pedidos que ya estén listos para despachar, se hagan en el orden en el que fueron preparados.
+
+
+---
+
+## Link al respoitorio:
+# https://github.com/catomsal/Proyecto-progra-2.git
