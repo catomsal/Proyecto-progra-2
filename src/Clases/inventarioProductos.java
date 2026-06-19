@@ -88,4 +88,15 @@ public class inventarioProductos {
         }
         System.out.println("==================");
     }
+
+    //nos devuelve una copia de todos los productos q hay en el momento
+    //nos sirve para la  cola de inventario critico
+
+    public Producto[] getProductos() {
+        Producto[] copia = new Producto[cantidad];
+        for (int i = 0; i < cantidad; i++) {
+            copia[i] = productos[i];
+        }
+        return copia;
+    }
 }

@@ -81,5 +81,16 @@ public class Main {
         // cola vacia
         expedicion.despachar();
         expedicion.despachar();
+
+        System.out.println("COLA CON PRIOIRDAD A LOS CRITICOS");
+        inventarioCritico criticos = new inventarioCritico(10);
+
+        criticos.construirCola(inventario);
+
+        System.out.println("MOSTRAMOS COLA");
+        criticos.mostrarPorPrioridad();
+
+        System.out.println("cual es el mas critico??");
+        criticos.consultarMasCritico();
     }
 }
