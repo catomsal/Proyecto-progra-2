@@ -36,7 +36,7 @@ Este documento detalla los casos de prueba ejecutados sobre el sistema, organiza
 | 2 | Calcular ruta a un pasillo sin conexiones | Origen A, Destino E (aislado) | Informa que no existe camino, sin romper el programa | ✅ OK |
 | 3 | Calcular ruta a un pasillo inexistente | Origen A, Destino Z | Informa que el pasillo de destino no existe | ✅ OK |
 
----
+----
 
 ## RF-03 — Inventario Crítico
 
