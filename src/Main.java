@@ -92,5 +92,34 @@ public class Main {
 
         System.out.println("cual es el mas critico??");
         criticos.consultarMasCritico();
+
+
+        // pruebo grafo del deposito (ruta mas corta)
+        System.out.println("\nprobamos el mapa del deposito");
+
+        GrafoDeposito deposito = new GrafoDeposito(10);
+
+        deposito.agregarPasillo(new Pasillo("A", "Pasillo A"));
+        deposito.agregarPasillo(new Pasillo("B", "Pasillo B"));
+        deposito.agregarPasillo(new Pasillo("C", "Pasillo C"));
+        deposito.agregarPasillo(new Pasillo("D", "Pasillo D"));
+
+        deposito.conectar("A", "B", 4);
+        deposito.conectar("A", "C", 1);
+        deposito.conectar("C", "B", 1);
+        deposito.conectar("B", "D", 2);
+        deposito.conectar("C", "D", 6);
+
+        System.out.println("\nruta mas corta de A a D:");
+        deposito.mostrarRuta("A", "D");
+
+        // pasillo que no esta conectado a nada
+        deposito.agregarPasillo(new Pasillo("E", "Pasillo aislado"));
+
+        System.out.println("\nruta a un pasillo sin conexion:");
+        deposito.mostrarRuta("A", "E");
+
+        System.out.println("\nruta a un pasillo que no existe:");
+        deposito.mostrarRuta("A", "Z");
     }
 }
