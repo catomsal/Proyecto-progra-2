@@ -1,4 +1,4 @@
-# TPO Programación 2 - UADE 
+# TPO Programación 2 - UADE
 
 **Alternativa C: Centro Logístico de Distribución Avanzada**
 
@@ -23,8 +23,8 @@ Para cumplir con los Requisitos Funcionales (RF) de eficiencia y tiempo de ejecu
 * **Pila Dinámica (Stack):** Utilizada para el **RF-05 (Trazabilidad)**. Permite apilar los registros de movimientos de mercadería y deshacer la última acción en caso de error de los operarios (LIFO).
 * **Cola FIFO (Queue):** Implementada para el **RF-04 (Línea de expedición)**. Garantiza que los pedidos listos se despachen en el orden exacto en el que fueron preparados.
 * **Cola de Prioridad:** Diseñada para el **RF-03 (Inventario Crítico)**. Mantiene los productos ordenados según su nivel de stock mediante desplazamiento, asegurando que el producto con menor existencia siempre esté listo para ser extraído y repuesto.
-* **Diccionario (Dato[]):** Aplicado para el **RF-01 (Localización de Stock)**. Estructura basada en pares de Clave (Código del producto) y Valor (Objeto Producto).
-* **Grafo no dirigido (Matriz de Adyacencia):** Utilizado para el **RF-02 (Optimización de Recolección)**. Modela la interconexión física de los pasillos y sectores del depósito logístico.
+* **Diccionario (arreglo de Producto indexado por código):** Aplicado para el **RF-01 (Localización de Stock)**. Permite agregar, buscar, eliminar y actualizar productos a partir de su código único, evitando duplicados.
+* **Grafo no dirigido (lista de adyacencia por nodo):** Utilizado para el **RF-02 (Optimización de Recolección)**. Modela la interconexión física de los pasillos del depósito mediante nodos (`Pasillo`) y conexiones con peso (`Arista`). Sobre esta estructura se implementó el **algoritmo de Dijkstra** para calcular la ruta más corta entre dos pasillos.
 
 ---
 
@@ -32,18 +32,32 @@ Para cumplir con los Requisitos Funcionales (RF) de eficiencia y tiempo de ejecu
 
 * [x] **Etapa 1:** Propuesta, diseño y diagramas (UML / Flujo).
 * [x] **Etapa 2:** Avance funcional y desarrollo de estructuras base.
-* [ ] **Etapa 3:** Presentación final del código completo y casos de prueba.
-
+* [x] **Etapa 3:** Presentación final del código completo y casos de prueba.
 
 ---
 
 ## Funcionalidades implementadas en la segunda etapa
 
-* **Historial de acciones:** Utilizando una pila dinámica, podemos deshacer la última acción que se realizó en los registros de movimientos de productos. Esto se implementó en caso de errores de carga en los operarios.
-*  **Linea de expedición:** Utilizando la estructura de una cola, nos aseguramos que los pedidos que ya estén listos para despachar, se hagan en el orden en el que fueron preparados.
+* **RF-01 - Localización de Stock:** Mediante un diccionario de productos indexado por código, se puede agregar, buscar, eliminar y actualizar el stock de cualquier producto sin recorrer toda la colección. Contempla el caso de códigos duplicados y búsquedas de productos inexistentes.
+* **RF-02 - Optimización de Recolección:** Mediante un grafo no dirigido que modela los pasillos del depósito y sus conexiones, se calcula la ruta más corta entre dos puntos utilizando el algoritmo de Dijkstra. Contempla el caso de pasillos sin conexión entre sí y de pasillos inexistentes.
+* **RF-03 - Inventario Crítico:** Mediante una cola de prioridad, los productos se ordenan automáticamente según su nivel de stock, permitiendo identificar de forma inmediata cuál necesita reposición más urgente.
+* **RF-04 - Línea de Expedición:** Mediante una cola FIFO, los pedidos que ya están listos para despachar se procesan en el mismo orden en el que fueron preparados.
+* **RF-05 - Trazabilidad de Lotes:** Mediante una pila dinámica, se registran todos los movimientos de stock y se puede deshacer el último movimiento en caso de error de carga de un operario.
 
+La demostración de las 5 funcionalidades se encuentra en `src/Main.java`.
 
 ---
 
-## Link al respoitorio:
-# https://github.com/catomsal/Proyecto-progra-2.git
+## Actividades realizadas por cada integrante
+
+| Integrante | Actividades realizadas |
+| :--- | :--- |
+| **Tomas Bautista Casal** | Estructuras base (Pila, Cola, Nodo). Implementación de RF-05 (Trazabilidad - `Movimiento`, `ServicioTrazabilidad`) y RF-04 (Línea de expedición - `Pedido`, `colaExpedicion`). |
+| **Francisco Gonzalez Miel** | Implementación de RF-01 (Localización de Stock - `Producto`, `Ubicacion`, `inventarioProductos`) y RF-02 (Optimización de Recolección - `Pasillo`, `Arista`, `GrafoDeposito` con algoritmo de Dijkstra). |
+| **Martin Federico Asprea** | Implementación de RF-03 (Inventario Crítico - `inventarioCritico` utilizando `ColaConPrioridad`). |
+
+---
+
+## Link al repositorio
+
+https://github.com/catomsal/Proyecto-progra-2.git
