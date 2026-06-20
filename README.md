@@ -47,17 +47,22 @@ Para cumplir con los Requisitos Funcionales (RF) de eficiencia y tiempo de ejecu
 La demostración de las 5 funcionalidades se encuentra en `src/Main.java`.
 
 ---
+## Cómo compilar y ejecutar
 
-## Actividades realizadas por cada integrante
+### Desde IntelliJ IDEA
+1. Abrir el proyecto (File → Open → seleccionar la carpeta del repo)
+2. Ejecutar la clase `Main.java` (botón ▶ o Shift+F10)
 
-| Integrante | Actividades realizadas |
-| :--- | :--- |
-| **Tomas Bautista Casal** | Estructuras base (Pila, Cola, Nodo). Implementación de RF-05 (Trazabilidad - `Movimiento`, `ServicioTrazabilidad`) y RF-04 (Línea de expedición - `Pedido`, `colaExpedicion`). |
-| **Francisco Gonzalez Miel** | Implementación de RF-01 (Localización de Stock - `Producto`, `Ubicacion`, `inventarioProductos`) y RF-02 (Optimización de Recolección - `Pasillo`, `Arista`, `GrafoDeposito` con algoritmo de Dijkstra). |
-| **Martin Federico Asprea** | Implementación de RF-03 (Inventario Crítico - `inventarioCritico` utilizando `ColaConPrioridad`). |
+### Desde consola
+```bash
+cd src
+javac Clases/*.java EstructurasBase/*.java Main.java
+java Main
+```
+
+La salida por consola muestra la ejecución y prueba de las 5 funcionalidades implementadas.
 
 ---
-
 ## Link al repositorio
 
 https://github.com/catomsal/Proyecto-progra-2.git
